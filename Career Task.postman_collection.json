@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "693e66d1-fcc8-4c85-b8af-dd33e7fa7463",
+		"name": "Career Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21418807"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"vikas\",\r\n    \"email\" : \"vikasrathod@gmail.com\",\r\n    \"password\" : \"pass@123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\" : \"user0@gmail.com\",\r\n    \"password\" : \"pass@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNGQ1ODdkNWY0NTgzMzFjM2UxNjMiLCJpYXQiOjE2Njg1MDA4NTEsImV4cCI6MTY2ODU4NzI1MX0.QIWt0DbJP_Z0IUIsCP24IibxdWuczupH-05RJOPcQL4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\" : \"venkateshwar@gmail.com\"\r\n    \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/auth/63734d587d5f458331c3e163",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"63734d587d5f458331c3e163"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNmRhZTljMGVmZjBmOTljZGVhYzEiLCJpYXQiOjE2Njg1MzI0MTIsImV4cCI6MTY2ODYxODgxMn0.bZSXT3gsBSgLjYGadbJsO9bEjkW5VTJGOuG1f_ixzOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/auth/deleteUser?id=63736dae9c0eff0f99cdeac1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"deleteUser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63736dae9c0eff0f99cdeac1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwNWNhYmI5ZjJlNWRmZDUxN2NkMDEiLCJpYXQiOjE2NjgzMjkyNzYsImV4cCI6MTY2ODQxNTY3Nn0.lGZTzfyJ5_mQcIQ72wTCAtv8H0z9fJ6nW_asOqWuRaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/auth/getAllUsers?page=1&limit=3&startDate=2022-11-01&endDate=2022-11-16&date=2022-11-15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"getAllUsers"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-11-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-11-16"
+						},
+						{
+							"key": "date",
+							"value": "2022-11-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users For a Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNmRmNjljMGVmZjBmOTljZGVhZDAiLCJpYXQiOjE2Njg1MTk3MTAsImV4cCI6MTY2ODYwNjExMH0.K_9l2R-0P6UU6ah7nz62spY-QVMyovVx7AF_LWM8D2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/auth/findByRole?page=1&limit=3&name=ADMIN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"auth",
+						"findByRole"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "name",
+							"value": "ADMIN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNmRkZTljMGVmZjBmOTljZGVhY2EiLCJpYXQiOjE2Njg1MjUxNDYsImV4cCI6MTY2ODYxMTU0Nn0.XnrXKP7s13psosPLht-VkvFZhYtdeMzQIHpo8Oz6EJ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/roles/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"roles",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcyNmI1MzQxNzE0ODc4ZDhmMmNlYTAiLCJpYXQiOjE2Njg0NDMwMDgsImV4cCI6MTY2ODUyOTQwOH0.ZuAHfJ-B4w4D-Jh4pKIoND9u-tIcBnJ7ZfmalVfMotE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ADMIN\",\r\n    \"id\":\"63726c9941714878d8f2cea6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/roles/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"roles",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcyNmI1MzQxNzE0ODc4ZDhmMmNlYTAiLCJpYXQiOjE2Njg0NDMwMDgsImV4cCI6MTY2ODUyOTQwOH0.ZuAHfJ-B4w4D-Jh4pKIoND9u-tIcBnJ7ZfmalVfMotE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/roles/63726c9941714878d8f2cea6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"roles",
+						"63726c9941714878d8f2cea6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNmRkZTljMGVmZjBmOTljZGVhY2EiLCJpYXQiOjE2Njg1MjUxNDYsImV4cCI6MTY2ODYxMTU0Nn0.XnrXKP7s13psosPLht-VkvFZhYtdeMzQIHpo8Oz6EJ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/roles/getAllRoles?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"roles",
+						"getAllRoles"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Role By User ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzczNmRkZTljMGVmZjBmOTljZGVhY2EiLCJpYXQiOjE2Njg1MjUxNDYsImV4cCI6MTY2ODYxMTU0Nn0.XnrXKP7s13psosPLht-VkvFZhYtdeMzQIHpo8Oz6EJ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/roles/rolesByUserID?id=63736df69c0eff0f99cdead0&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"roles",
+						"rolesByUserID"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63736df69c0eff0f99cdead0"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
